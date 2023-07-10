@@ -1,0 +1,143 @@
+header{
+    background: var(--main-color);
+    height: 70px;
+    border-bottom: 1px solid rgb(253, 253, 253);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header nav{
+    width: 1200px;
+    max-width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 20px;
+}
+
+header nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 700px;
+}
+
+
+header nav ul li a{
+    text-decoration: none;
+    color: var(--white-color);
+    position: relative;
+    transition: all cubic-bezier(0.62, 1.19, 0.43, 1.25) 0.2s;
+}
+
+header nav ul li a:not(#topCall)::after{
+    content: '';
+    position: absolute;
+    width: 0px;
+    height: 4px;
+    background: var(--white-color);
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    transition: all cubic-bezier(0.62, 1.19, 0.43, 1.25) 0.2s;
+}
+
+header nav ul li.active a:not(#topCall)::after{
+    width: 130%;
+}
+
+header nav ul li a:not(#topCall):hover::after{
+    width: 130%;
+}
+
+header nav ul li a#topCall{
+    width: 40px;
+    height: 40px;
+    background: var(--sec-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+header nav ul li button{
+    color: var(--white-color);
+    cursor: pointer;
+    transition: all ease 0.2s;
+    position: relative;
+    overflow: hidden;
+}
+
+header nav ul li button:active{
+    transform: scale(0.98);
+}
+
+header nav ul button{
+    width: 150px;
+    border: none;
+    height: 40px;
+    font-size: 15px;
+    border-radius: 50px;
+    background: var(--sec-color);
+}
+
+#menuBtn{
+    display: none;
+}
+
+/* make responsive */
+@media (max-width: 1000px) {
+    header nav ul{
+        width: 650px;
+    }
+}
+
+@media (max-width: 1000px){
+    #menuBtn{
+        display: block;
+        color: var(--white-color);
+        font-size: 24px;
+    }
+    header nav ul{
+        position: fixed;
+        bottom: 0;
+        left: -100%;
+        width: 0px;
+        height: calc(100vh - 70px);
+        background: var(--main-color);
+        flex-direction: column;
+        justify-content: unset;
+        padding-top: 40px;
+        transition: width cubic-bezier(0.62, 1.19, 0.43, 1.25) 0.2s;
+        z-index: 100;
+    }
+    
+    header nav ul.active{
+        left: 0;
+        width: 300px;
+    }
+
+    header nav ul li{
+        margin-bottom: 20px;
+    }
+    header nav ul li a:not(#topCall):hover::after{
+        width: 0px;
+    }
+}
+
+@media (max-width: 700px){
+    header nav ul.active{
+        left: 0;
+        width: 100%;
+    }
+    header nav ul li button, header nav ul li a{
+        cursor: default;
+    }
+}

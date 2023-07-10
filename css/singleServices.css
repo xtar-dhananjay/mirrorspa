@@ -1,0 +1,214 @@
+#singleService{
+    width: 1200px;
+    max-width: 100%;
+    padding: 0 20px;
+    margin: 40px auto 200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#serviceContent{
+    /* background: rgb(255, 249, 249); */
+    /* border: 2px dashed var(--main-color); */
+    /* background-image: url('https://img.freepik.com/premium-photo/zen-stones-leaves-with-water-drops-spa-background-with-spa-accessories-dark-background-top-view-free-space-your-text_187166-19289.jpg'); */
+    /* background-size: cover; */
+    border-radius: 20px;
+    width: 55%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border: 1px solid lightgray;
+    overflow: hidden;
+}
+
+#allServices{
+    width: 500px;
+    padding: 20px;
+}
+
+#serviceArticle{
+    
+    padding: 20px;
+    backdrop-filter: blur(5px);
+}
+
+
+#serviceArticle img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 2px solid var(--main-color);
+}
+
+#serviceArticle #articleImgbox{
+    width: 100%;
+    height: 250px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+#articleImgbox h3{
+    background: var(--main-color);
+    color: var(--white-color);
+    position: absolute;
+    top: 20px;
+    padding: 5px 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    right: 0;
+}
+
+#articleImgbox h3 .oldPrice{
+    color: red;
+}
+
+#serviceArticle h2{
+    font-size: 40px;
+    margin: 15px 0 12px;
+    color: #333;
+}
+
+#serviceArticle p{
+    font-size: 18px;
+    color: #333;
+}
+
+#serviceArticle ul{
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+#serviceArticle ul li{
+    list-style: none;
+    margin-bottom: 10px;
+    font-size: 18px;
+    position: relative;
+    color: #333;
+}
+
+#serviceArticle ul li::after{
+    content: '';
+    position: absolute;
+    background: var(--main-color);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#serviceArticle button{
+    width: 100%;
+    height: 50px;
+    background: var(--main-color);
+    color: var(--white-color);
+    font-size: 18px;
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all ease 0.2s;
+}
+
+#serviceArticle button:active{
+    transform: scale(0.99);
+}
+
+/* lates make a all services section */
+#innerAllServices{
+    display: flex;
+    flex-direction: column;
+}
+
+#allServicesHeading{
+    font-size: 30px;
+    color: #444444;
+    margin: 0px 0 20px;
+}
+
+#innerAllServices .services{
+    display: flex;
+    align-items: center;
+    border: 2px solid var(--main-color);
+    margin-bottom: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#innerAllServices .services img{
+    width: 150px;
+}
+
+#innerAllServices .services a{
+    text-decoration: none;
+}
+
+#innerAllServices .serviceDetails{
+    margin-left: 20px;
+}
+
+#innerAllServices .services a h2{
+    color: #444444;
+    margin-bottom: 10px;
+}
+
+#innerAllServices .services button{
+    width: 100%;
+    height: 35px;
+    border: none;
+    border-radius: 20px;
+    color: var(--white-color);
+    background: var(--main-color);
+    font-size: 16px;
+    cursor: pointer;
+    transition: all ease 0.2s;
+}
+
+#innerAllServices .services button:active{
+    transform: scale(0.98);
+}
+
+@media (max-width: 950px) {
+    #singleService{
+        flex-direction: column;
+    }
+    #serviceContent{
+        width: 100%;
+    }
+    #allServices{
+        width: 100%;
+        margin-top: 50px;
+    }
+    #innerAllServices .services button, #serviceArticle button{
+        cursor: default;
+    }
+}
+
+@media (max-width: 550px) {
+    #innerAllServices .services{
+        flex-direction: column;
+        padding: 20px;
+    }   
+    #innerAllServices .services img{
+        width: 100%;
+    }
+
+    #innerAllServices .services a{
+        cursor: default;
+    }
+    
+    #innerAllServices .services button{
+        width: 100%;
+    }
+
+    #innerAllServices .serviceDetails{
+        margin-top: 15px;
+        margin-left: 0;
+    }
+    #innerAllServices .services a h2{
+        text-align: center;
+        font-size: 20px;
+    }
+}

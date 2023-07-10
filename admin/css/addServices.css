@@ -1,0 +1,131 @@
+#addServices{
+    width: 800px;
+    max-width: 100%;
+    padding: 0 20px;
+    margin: 50px auto 100px;
+    overflow: auto;
+    border: 1px solid lightgray;
+    border-radius: 20px;
+    padding: 30px;
+}
+
+#addServices h2{
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 500;
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 10px;
+}
+
+
+
+#addServices #topFields{
+    display: flex;
+    align-items: center;
+}
+
+#addServices #imageBox{
+    width: 100%;
+    width: 350px;
+    height: 220px;
+    background: lightgray;
+    color: var(--white-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    user-select: none;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+#imageBox img{
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+    display: none;
+}
+
+#addServices #topFields #rightSide{
+    margin-left: 20px;
+    width: 50%;
+}
+
+#addServices #topFields .inputs{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+#addServices #topFields .inputs label{
+    margin-bottom: 5px;
+    font-size: 15px;
+    color: #444;
+}
+
+#addServices #topFields .inputs:last-child{
+    margin-bottom: 0;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#addServices #topFields .inputs input{
+    width: 100%;
+    height: 40px;
+    outline: none;
+    padding-left: 15px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+#bottomInputs{
+    margin-top: 20px;
+}
+
+
+#bottomInputs .inputs{
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+#bottomInputs .inputs label{
+    color: #444;
+}
+
+#bottomInputs .inputs textarea, #bottomInputs .inputs input{
+    width: 100%;
+    border: 1px solid lightgray;
+    min-height: 100px;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+    resize: none;
+    outline: none;
+}
+
+#bottomInputs .inputs input{
+    min-height: 40px;
+    padding: 0 15px;
+}
+
+#addServices form button{
+    width: 100%;
+    height: 40px;
+    border: none;
+    font-size: 12px;
+    border-radius: 5px;
+    background: var(--main-color);
+    color: var(--white-color);
+    font-size: 16px;
+    cursor: pointer;
+}

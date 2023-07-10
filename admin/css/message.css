@@ -1,0 +1,48 @@
+/* message box */
+.msgBox{
+    width: fit-content;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 20px;
+    border-radius: 10px;
+    font-size: 14px;
+    position: fixed;
+    left: 50%;
+    top: 90%;
+    user-select: none;
+    transform: translate(-50%, -50%) scale(0.03);
+    pointer-events: none;
+    z-index: -100;
+    opacity: 0;
+    transition: all cubic-bezier(0.51, 1.24, 0.06, 1.11) 0.2s;
+}
+
+.msgBox p{
+    margin-left: 10px;
+    color: #ffffff;
+}
+
+.msgBox i{
+    font-size: 15px;
+    color: #fff;
+}
+
+#errorMsg{
+    background: #ff0a0ac6;
+    backdrop-filter: blur(2px);
+}
+
+#successMsg{
+    background: #23ce23cd;
+    backdrop-filter: blur(2px);
+}
+
+#errorMsg.activeMsg, #successMsg.activeMsg{
+    z-index: 2;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    pointer-events: auto;
+    z-index: 4000;
+}

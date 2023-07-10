@@ -1,0 +1,148 @@
+#serviceSection{
+    width: 1200px;
+    max-width: 100%;
+    padding: 0 20px;
+    margin: 50px auto 100px;
+    overflow: auto;
+}
+
+#serviceSection #topButton{
+    text-align: left;
+    margin: 0 0 30px;
+}
+
+#serviceSection #topButton button{
+    width: 200px;
+    height: 40px;
+    background: var(--main-color);
+    border: none;
+    color: var(--white-color);
+    font-size: 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all cubic-bezier(0.62, 1.19, 0.43, 1.25) 0.2s;
+}
+
+#serviceSection #topButton button:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#serviceSection #topButton button:active{
+    transform: scale(0.98);
+}
+
+#serviceSection #allServices img{
+    width: 100%;
+    border-radius: 20px;
+}
+
+#serviceSection #allServices{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+
+#serviceSection #allServices .services{
+    border: 1px solid lightgray;
+    padding: 20px;
+    border-radius: 20px;    
+    transition: all cubic-bezier(0.62, 1.19, 0.43, 1.25) 0.2s;
+}
+
+#serviceSection #allServices .services a{
+    text-decoration: none;
+}
+
+#serviceSection #allServices .services:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-top: -10px;
+}
+
+
+#serviceSection #allServices .services h2{
+    font-size: 23px;
+    color: #333;
+    margin: 5px 0;
+}
+
+#serviceSection #allServices .services p{
+    color: #555;
+    margin-bottom: 5px;
+}
+
+#serviceSection #allServices .services .servicePrice{
+    color: #222;
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+#serviceSection #allServices .services .servicePrice .oldPrice{
+    color: #777;
+}
+
+#serviceSection #allServices .services .servicesBtns{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#serviceSection #allServices .services .servicesBtns a{
+    width: 48%;
+}
+
+#serviceSection #allServices .services .servicesBtns button{
+    width: 100%; 
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    color: var(--white-color);
+    background: var(--main-color);
+    border: 2px solid var(--main-color);
+    cursor: pointer;
+}
+
+#serviceSection #allServices .services .servicesBtns .deleteBtn{
+    background: transparent;
+    color: #333;
+}
+
+@media (max-width: 900px) {
+    
+    #serviceSection #allServices{
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+    
+    #serviceSection #allServices{
+        grid-template-columns: repeat(1, 1fr);
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+    }
+
+    #serviceSection #allServices .services a{
+        cursor: default;
+    }
+
+    #serviceSection #topButton button{
+        width: 100%;
+        cursor: default;
+    }
+
+    #serviceSection #allServices .services .servicesBtns button{
+        cursor: default;
+    }
+    
+    #serviceSection #topButton button:hover{
+        box-shadow: none;
+    }
+}

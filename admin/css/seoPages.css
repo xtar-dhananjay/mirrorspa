@@ -1,0 +1,73 @@
+#formSection{
+    width: 1200px;
+    max-width: 100%;
+    padding: 0 20px;
+    margin: 50px auto 100px;
+    overflow: auto;
+}
+
+#formSection form h2{
+    font-size: 30px;
+    color: #333;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+#formSection form{
+    /* background: red; */
+    border: 1px solid lightgray;
+    padding: 50px;
+    border-radius: 40px;
+    width: 800px;
+    max-width: 100%;
+    margin: auto;
+}
+
+#formSection form .inputs{
+    /* background: blue; */
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+
+}
+
+#formSection form .inputs label{
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+#formSection form .inputs input{
+    width: 100%;
+    height: 40px;
+    border: 1px solid lightgray;
+    padding: 0 15px;
+    border-radius: 5px;
+    outline: none;
+}
+
+#formSection form button{
+    width: 100%;
+    border: none;
+    height: 40px;
+    background: var(--main-color);
+    border-radius: 20px;
+    color: var(--white-color);
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 10px;
+    outline: none;
+    transition: all ease 0.3s;
+}
+
+#formSection form button:active{
+    transform: scale(0.99);
+}
+
+@media (max-width: 500px) {
+    #formSection form{
+        padding: 30px;
+    }
+    #formSection form button{
+        cursor: default;
+    }
+}

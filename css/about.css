@@ -1,0 +1,133 @@
+#aboutWelcome{
+    width: 100%;
+    position: relative;
+}
+
+#aboutWelcome img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+#aboutWelcome div{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgba(4, 0, 255, 0.17);
+    backdrop-filter: blur(2px);
+    padding: 0 35px;
+    text-align: center;
+}
+
+#aboutWelcome div h2{
+    color: var(--white-color);
+    font-size: 40px;
+    font-weight: 600;
+}
+
+#aboutWelcome div p{
+    color: var(--white-color);
+    font-size: 17px;
+    font-weight: 400;
+}
+
+/* about Text content */
+#midAbout{
+    width: 1200px;
+    max-width: 100%;
+    padding: 0 20px;
+    margin: 60px auto 200px;
+}
+
+#aboutTextContent .textContent{
+    margin-bottom: 40px;
+}
+
+#aboutTextContent .textContent h2{
+    font-size: 40px;
+    color: #666666;
+    margin-bottom: 15px;
+}
+
+#aboutTextContent .textContent h2 span{
+    color: var(--main-color);
+}
+
+#aboutTextContent .textContent p{
+    margin-bottom: 13px;
+    font-size: 18px;
+    color: #444444;
+    line-height: 25px;
+}
+
+/* about contact */
+#aboutContact{
+    margin-top: 80px;
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
+    height: 250px;
+}
+#aboutContact img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#aboutContact div{
+    padding: 30px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.603);
+    backdrop-filter: blur(2px);
+}
+
+#aboutContact button{
+    width: 200px;
+    height: 50px;
+    border: none;
+    border-radius: 50px;
+    font-size: 20px;
+    color: var(--white-color);
+    background: var(--sec-color);
+    outline: none;
+    transition: all ease 0.2s;
+    cursor: pointer;
+}
+
+#aboutContact div button:hover{
+    box-shadow: rgba(255, 255, 255, 0.39) 0px 3px 8px;
+}
+
+#aboutContact div p{
+    font-size: 20px;
+    margin-top: 10px;
+    color: var(--white-color);
+    text-align: center;
+}
+
+
+
+
+
+@media (max-width: 700px) {
+    #aboutTextContent .textContent h2{
+        font-size: 32px;
+    }
+    #aboutTextContent .textContent p{
+        font-size: 16px;
+        line-height: 22px;
+    }
+}

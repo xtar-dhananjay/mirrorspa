@@ -1,0 +1,54 @@
+#seoPages{
+    width: 1200px;
+    max-width: 100%;
+    padding: 0 20px;
+    margin: 50px auto 100px;
+    overflow: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+
+#seoPages div{
+    background: var(--main-color);
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+#seoPages div h2{
+    font-size: 30px;
+    color: var(--white-color);
+    margin-bottom: 10px;
+}
+
+#seoPages div button{
+    width: 200px;height: 40px;
+    border: none;
+    border-radius: 20px;
+    font-size: 20px;
+    background: var(--white-color);
+    outline: none;
+    cursor: pointer;
+    transition: all ease 0.3s;
+}
+
+#seoPages div button:active{
+    transform: scale(0.98);
+}
+
+/* make responsive */
+@media (max-width: 900px) {
+    #seoPages{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #seoPages div button, #seoPages div a{
+        cursor: default;
+    }
+}
+@media (max-width: 550px) {
+    #seoPages{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

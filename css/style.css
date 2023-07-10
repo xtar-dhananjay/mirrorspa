@@ -1,0 +1,466 @@
+#homeWelcome{
+    width: 100%;
+    position: relative;
+    height: 400px;
+}
+
+#homeWelcome #innerHomeWelcome{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgba(255, 94, 94, 0.17);
+    backdrop-filter: blur(1px);
+    padding: 0 35px;
+    text-align: center;
+    /* display: none;   */
+}
+
+#homeWelcome #innerHomeWelcome img{
+    width: 300px;
+}
+
+#homeWelcome #innerHomeWelcome p{
+    color: var(--white-color);
+    margin: 10px 0 15px;
+    font-size: 17px;
+}
+
+#homeWelcome #innerHomeWelcome button{
+    width: 200px;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    background: var(--sec-color);
+    color: var(--white-color);
+    cursor: pointer;
+    margin: 3px 0 10px;
+    user-select: none;
+    transition: all ease 0.2s;
+    position: relative;
+    overflow: hidden;
+}
+
+#homeWelcome #innerHomeWelcome button:before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient(
+        120deg,
+        rgba(255,255,255, 0) 30%,
+        rgba(255,255,255, .8),
+        rgba(255,255,255, 0) 70%
+    );
+    top: 0;
+    left: -100px;
+    animation: shine 3s infinite linear; /* Animation */
+}
+
+@keyframes shine {
+    0% {left: -100px}
+    20% {left: 100%}
+    100% {left: 100%}
+}
+
+
+#homeWelcome #innerHomeWelcome button:active{
+    transform: scale(0.98);
+}
+
+/* Home mid section start */
+
+#homeMidSection, #homeMidSection2{
+    width: 1200px;
+    max-width: 100%;
+    padding: 0 20px;
+    margin: 80px auto;
+}
+
+#homeMidSection #welcomeText{
+    margin-bottom: 100px;
+}
+
+#homeMidSection #welcomeText h1{
+    font-size: 5vw;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 900;
+    color: transparent;
+    -webkit-text-stroke: 1px lightgray;
+}
+
+/* Brief About Spa */
+#briefAbout{
+    width: 100%;
+    background: var(--main-color);
+    left: 0;
+    padding: 50px 20px;
+}
+
+#innerBriefAbout{
+    max-width: 100%;
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#innerBriefAbout img{
+    width: 400px;
+    border-radius: 50px;
+}
+
+#innerBriefAbout p{
+    margin-left: 40px;
+    font-size: 20px;
+    text-align: center;
+    color: var(--white-color);
+}
+
+
+
+/* Home mid section 2 */
+#homeMidSection2 #bestSercies #bestServicesHeading{
+    text-transform: uppercase;
+    font-size: 50px;
+    margin-top: 120px;
+    color: #888888;
+    margin-bottom: 50px;
+}
+
+#homeMidSection2 #bestSercies h2 span{
+    color: var(--main-color);
+}
+
+#servicesItem .serItem a{
+    text-decoration: none;
+}
+
+#servicesItem .serItem .oldPrice{
+    color: #a5a5a5;
+}
+
+#servicesItem .serItem{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: red;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    background: rgba(255, 255, 255, 0.20);
+    transition: all ease 0.3s;
+}
+
+#servicesItem .serItem:hover{
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.05);
+}
+
+#servicesItem img{
+    border-radius: 20px;
+}
+
+#servicesItem .itemDetails{
+    margin-left: 40px;
+}
+
+#servicesItem .itemDetails h2{
+    font-size: 35px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    color: #555555;
+}
+#servicesItem .itemDetails p{
+    font-size: 18px;
+    margin-top: 8px;
+    text-align: justify;
+    color: #333;
+    padding-right: 20px;
+}
+
+#servicesItem .itemDetails h3{
+    font-size: 30px;
+    margin-top: 8px;
+    font-weight: 500;
+    color: #333333;
+}
+
+#servicesItem .itemDetails button{
+    width: 200px;
+    height: 40px;
+    margin-top: 10px;
+    color: var(--white-color);
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    background: var(--main-color);
+    cursor: pointer;
+}
+
+#servicesItem .serItem img{
+    width: 400px;
+}
+
+/* make reviews section */
+
+#reviewBoxHeading{
+    text-transform: uppercase;
+    font-size: 50px;
+    margin-top: 120px;
+    color: #888888;
+    margin-bottom: 50px;
+}
+
+#reviewBoxHeading span{
+    color: var(--main-color);
+}
+
+.mySwiper2{
+    background: var(--main-color);
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.cusReview{
+    background: #ffffff41;
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+}
+
+#reviewBox{
+    margin-top: 100px;
+}
+#reviewBox .cusReview img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#reviewBox .customerProfile{
+    display: flex;
+}
+
+#reviewBox .customerProfile .personDetails{
+    margin-left: 20px;
+}
+
+#reviewBox .customerProfile .personDetails h3{
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--white-color);
+}
+
+#reviewBox .customerProfile .personDetails p{
+    color: var(--white-color);
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.cusReview .customerTypes{
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--white-color);
+    margin: 15px 0;
+}
+
+.cusReview i{
+    font-size: 20px;
+    color: var(--white-color);
+}
+
+/* contact Section */
+#ContactInfoHeading{
+    text-transform: uppercase;
+    font-size: 50px;
+    margin-top: 120px;
+    color: #888888;
+    margin-bottom: 60px;
+}
+
+#ContactInfoHeading span{
+    color: var(--main-color);
+}
+
+#contactSection{
+    display: flex;    
+    margin-bottom: 250px;
+}
+
+#contactInfoBox .cInfo{
+    background: red;
+    padding: 20px;
+    border-radius: 20px;
+    width: 400px;
+}
+#contactInfoBox .cInfo:not(.cInfo1){
+    margin-top: 15px;
+}
+
+#contactInfoBox .cInfo1{
+    background: #FFF4E0;
+}
+#contactInfoBox .cInfo2{
+    background: #FFEBB4;
+    
+}
+#contactInfoBox .cInfo3{
+    background: #E8F3D6;
+}
+
+#contactInfoBox .cInfo .cDetails{
+    margin-top: 8px;
+}
+
+#contactInfoBox .cInfo .cDetails p{
+    font-size: 18px;
+    margin-top: 4px;
+    color: #555555;
+}
+
+#googleMap{
+    width: calc(100% - 440px);
+}
+
+#googleMap iframe{
+    margin-left: 40px;
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 100%;
+    border: 20px solid #FFEBB4;
+}
+
+#contactInfoBox .cInfo .cHeading{
+    display: flex;
+    align-items: center;
+}
+
+#contactInfoBox .cInfo .cHeading h2{
+    color: #666666;
+    font-size: 30px;
+}
+
+#contactInfoBox .cInfo .cHeading i{
+    font-size: 25px;
+    margin-right: 10px;
+    color: #666666;
+}
+
+/* make responsive */
+@media (max-width: 900px) {
+    #innerBriefAbout img{
+        width: 300px;
+    }    
+    #homeMidSection #welcomeText h1{
+        font-size: 6vw;
+    }
+    #servicesItem .serItem img{
+        width: 300px;
+    }
+    #servicesItem .itemDetails p{
+        font-size: 15px;
+    }
+    #servicesItem .itemDetails h2{
+        font-size: 30px;
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 800px){
+    
+    #servicesItem .serItem img{
+        width: 250px;
+    }
+
+    #homeWelcome{
+        height: 300px;
+    }
+
+}
+
+@media (max-width: 700px){
+    #homeWelcome #innerHomeWelcome img{
+        width: 200px;
+    }
+    
+    #homeMidSection #welcomeText h1{
+        font-size: 9vw;
+    }
+
+    #homeWelcome #innerHomeWelcome p{
+        margin: 10px 0;
+    }
+    
+    #homeWelcome #innerHomeWelcome button, #servicesItem .itemDetails button{
+        width: 180px;
+        cursor: default;
+    }
+    #servicesItem .itemDetails button{
+        width: 100%;
+    }
+
+    #innerBriefAbout{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #innerBriefAbout p{
+        margin-top: 30px;
+        margin-left: 0;
+        font-size: 18px;
+    }
+
+    #innerBriefAbout img{
+        width: 100%;
+    }
+    #servicesItem .serItem{
+        flex-direction: column;
+    }
+    #servicesItem .serItem img{
+        width: 100%;
+    }
+    #servicesItem .itemDetails{
+        margin: 0;
+        margin-top: 30px;
+    }
+    #homeMidSection2 #bestSercies #bestServicesHeading, #reviewBoxHeading, #ContactInfoHeading{
+        font-size: 40px;
+    }
+    #servicesItem .itemDetails p{
+        font-size: 14px;
+    }
+    #homeMidSection2 #bestSercies #bestServicesHeading{
+        margin-top: 35px;
+    }
+    #contactSection{
+        flex-direction: column;
+    }
+    #googleMap, #contactInfoBox .cInfo{
+        width: 100%;
+    }
+    #googleMap iframe{
+        margin-left: 0;
+        margin-top: 50px;
+        height: 300px;
+    }
+    #ContactInfoHeading{
+        margin-top: 120px;
+    }
+    .mySwiper2{
+        padding: 10px;
+    }
+    
+    #homeWelcome{
+        height: 250px;
+    }
+}

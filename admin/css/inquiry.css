@@ -1,0 +1,63 @@
+#inquiryTable{
+    width: 1200px;
+    max-width: 100%;
+    padding: 0 20px;
+    margin: 50px auto 100px;
+    overflow: auto;
+}
+
+#inquiryTable table{
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    min-width: 800px;
+}
+
+#inquiryTable table tbody tr:nth-child(even){
+    background: rgb(243, 243, 243);
+}
+
+#inquiryTable table thead{
+    background: var(--main-color);
+    height: 50px;
+    color: var(--white-color);
+}
+
+td, th{
+    padding: 13px;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+#loadBox{
+    text-align: center;
+    margin: 30px;
+}
+
+#loadBox button{
+    width: 200px;
+    height: 40px;
+    border: none;
+    color: var(--white-color);
+    background: var(--main-color);
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all ease 0.3s;
+    user-select: none;
+    display: none;
+}
+
+#loadBox button:active{
+    transform: scale(0.98);
+}
+
+@media (max-width: 800px) {
+    #loadBox button{
+        cursor: default;
+    }   
+}
+
