@@ -7,7 +7,8 @@
 }
 
 :root{
-    --main-color: rgb(0, 201, 0);
+    --main-color: rgb(50, 50, 50);
+    /* --main-color: rgb(0, 201, 0); */
     --sec-color: #2192FF;
     --white-color: #ffffff;
 }

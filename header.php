@@ -5,32 +5,49 @@
     $description = "";
     $keywords = "";
 
-    switch($PageName){
-        case 'about.php':
-            $PP = "About";
-        break;
-        case 'services.php':
-            $PP = "Service";
-        break;
-        case 'contact.php':
-            $PP = "Contact";
-        break;
-        case 'roomThemes.php':
-            $PP = "RoomThemes";
-        break;
-        default:
-            $PP = "Home";
-            break;
-        }
+    if ($PageName == 'singleServices.php') {
+        $dataID = $_GET['dataID'];
+        $query = "SELECT * FROM `services` WHERE serviceid = :serviceid";
+        $stmt = $conn->prepare($query);
+        $stmt->bindParam(':serviceid', $dataID);
+        $stmt->execute();
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        $title = $result['serviceName'];
+        $keywords = $result['benefits'];
+        $description = $result['desc'];
+        
 
-    $query = "SELECT * FROM seo WHERE seoPage = :seoPage";
-    $stmt = $conn->prepare($query);
-    $stmt->bindParam(':seoPage', $PP);
-    $stmt->execute();
-    $result = $stmt->fetch(PDO::FETCH_ASSOC);
-    $title = $result['title'];
-    $keywords = $result['keywords'];
-    $description = $result['author'];
+    }else{
+
+        switch($PageName){
+            case 'about.php':
+                $PP = "About";
+            break;
+            case 'services.php':
+                $PP = "Service";
+            break;
+            case 'contact.php':
+                $PP = "Contact";
+            break;
+            case 'roomThemes.php':
+                $PP = "RoomThemes";
+            break;
+            default:
+                $PP = "Home";
+                break;
+            }
+    
+        $query = "SELECT * FROM seo WHERE seoPage = :seoPage";
+        $stmt = $conn->prepare($query);
+        $stmt->bindParam(':seoPage', $PP);
+        $stmt->execute();
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        $title = $result['title'];
+        $keywords = $result['keywords'];
+        $description = $result['author'];
+    }
+
+    
 
 
 ?>

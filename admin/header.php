@@ -1,3 +1,16 @@
+<?php     
+
+    session_start();
+    if (!isset($_SESSION['username'])) {
+        ?>
+        <script>
+            window.location = "index.php";
+        </script>
+        <?php
+    }
+    
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +33,7 @@
     <header>
         <nav>
             <div id="mainLogo">
-                <a href="index.php"><img src="img/mainLogo.png" alt="Mirror Spa Logo | Best Spa in Delhi, Pitampura, NSP, India | Mirror spa"></a>
+                <a href="inquiry.php"><img src="img/mainLogo.png" alt="Mirror Spa Logo | Best Spa in Delhi, Pitampura, NSP, India | Mirror spa"></a>
             </div>
             <i class="fa-solid fa-bars" id="menuBtn"></i>
             <ul>
@@ -28,7 +41,7 @@
                 <li><a href="contact.php">Contact</a></li>
                 <li><a href="services.php">Services</a></li>
                 <li><a href="SEO.php">SEO</a></li>
-                <li><button>Logout</button></li>
+                <li><button id="logoutBtn">Logout</button></li>
             </ul>
         </nav>
     </header>

@@ -4,10 +4,11 @@
 <div id="addServices">
     <form action="">
         <h2>New Services</h2>
-        <p id="updateID" style="display: none;"><?php echo $_GET['updateID']; ?></p>
+        <input type="text" name="updateID" id="updateID" hidden value="<?php echo $_GET['updateID']; ?>">
         <div id="topFields">
             <div id="imageBox" onclick="document.getElementById('imgFile').click();">
                 <input type="file" hidden id="imgFile" name="file">
+                <input type="text" hidden id="hiddenImgFile" name="hiddenFile">
                 <span id="textDisplay">Click To Add Picture</span>
                 <img src="img/services/1.jpg" id="displayImgs" alt="Spa-images">
             </div>
