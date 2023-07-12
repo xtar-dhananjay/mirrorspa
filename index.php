@@ -126,7 +126,7 @@
     <div id="reviewBox">
         <h2 id="reviewBoxHeading"><span>Customer</span> Reviews</h2>
         <div class="swiper mySwiper2 swiper2 swiper-initialized swiper-horizontal">
-            <div class="swiper-wrapper" id="swiper-wrapper-dad870d4d398efe5" aria-live="off"
+            <div class="swiper-wrapper allReviewBox" id="swiper-wrapper-dad870d4d398efe5" aria-live="off"
                 style="cursor: grab; transition-duration: 0ms; transform: translate3d(-250px, 0px, 0px);">
                 <div class="swiper-slide cusReview swiper-slide-next swiper-slide-prev" role="group" aria-label="1 / 2"
                     data-swiper-slide-index="0">
